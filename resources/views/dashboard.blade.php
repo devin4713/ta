@@ -147,6 +147,6 @@
             });
         }
 
-        setInterval(updateCharts, 1000);
+        setInterval(updateCharts, 500);
     </script>
 </x-app-layout>
