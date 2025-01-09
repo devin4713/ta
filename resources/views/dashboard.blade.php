@@ -91,6 +91,13 @@
                         ticks: {
                             autoSkip: false
                         }
+                    },
+                    y: {
+                        min: 4,
+                        max: 6,
+                        ticks: {
+                            stepSize: 0.5
+                        }
                     }
                 }
             }
@@ -122,6 +129,13 @@
                     x: {
                         ticks: {
                             autoSkip: false
+                        }
+                    },
+                    y: {
+                        min: 4,
+                        max: 6,
+                        ticks: {
+                            stepSize: 0.5
                         }
                     }
                 }
