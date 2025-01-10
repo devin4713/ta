@@ -94,7 +94,7 @@
                     },
                     y: {
                         min: 4,
-                        max: 6,
+                        max: 6.5,
                         ticks: {
                             stepSize: 0.5
                         }
@@ -133,7 +133,7 @@
                     },
                     y: {
                         min: 4,
-                        max: 6,
+                        max: 6.5,
                         ticks: {
                             stepSize: 0.5
                         }
