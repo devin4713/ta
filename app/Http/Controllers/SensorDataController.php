@@ -21,13 +21,13 @@ class SensorDataController extends Controller
 
     public function show()
     {
-        $sensorData = SensorData::latest()->take(31)->get();
+        $sensorData = SensorData::latest()->take(30)->get();
         return view('dashboard', ['sensorData' => $sensorData]);
     }
 
     public function update_chart()
     {
-        $sensorData = SensorData::latest()->take(31)->get();
+        $sensorData = SensorData::latest()->take(30)->get();
         return response()->json($sensorData);
     }
 }
