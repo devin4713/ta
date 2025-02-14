@@ -19,15 +19,21 @@ class SensorDataController extends Controller
         return response()->json(['message' => 'Data successfully received and stored'], 201);
     }
 
-    public function show()
-    {
-        $sensorData = SensorData::latest()->take(30)->get();
-        return view('dashboard', ['sensorData' => $sensorData]);
-    }
-
     public function update_chart()
     {
         $sensorData = SensorData::latest()->take(30)->get();
         return response()->json($sensorData);
+    }
+
+    public function showWithKF()
+    {
+        $sensorData = SensorData::latest()->take(30)->get();
+        return view('after-kf', ['sensorData' => $sensorData]);
+    }
+
+    public function showWithoutKF()
+    {
+        $sensorData = SensorData::latest()->take(30)->get();
+        return view('before-kf', ['sensorData' => $sensorData]);
     }
 }
