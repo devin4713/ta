@@ -95,7 +95,7 @@
                     },
                     y: {
                         min: 4,
-                        max: 6,
+                        max: 8,
                         ticks: {
                             stepSize: 0.5,
                             font: {
