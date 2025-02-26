@@ -36,4 +36,10 @@ class SensorDataController extends Controller
         $sensorData = SensorData::latest()->take(30)->get();
         return view('before-kf', ['sensorData' => $sensorData]);
     }
+
+    public function showCombined()
+    {
+        $sensorData = SensorData::latest()->take(30)->get();
+        return view('combined', ['sensorData' => $sensorData]);
+    }
 }

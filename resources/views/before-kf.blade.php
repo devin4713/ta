@@ -64,7 +64,7 @@
             data: {
                 labels: extractedData.labels,
                 datasets: [{
-                    label: 'Water Level (cm)',
+                    label: 'Ketinggian Air tanpa Kalman FIlter (cm)',
                     data: extractedData.befores,
                     borderColor: 'rgba(255, 99, 132, 1)',
                     borderWidth: 1,
@@ -76,12 +76,7 @@
                 maintainAspectRatio: false,
                 plugins: {
                     legend: {
-                        position: 'bottom',
-                        labels: {
-                            font: {
-                                size: 14
-                            }
-                        }
+                        display: false
                     }
                 },
                 scales: {

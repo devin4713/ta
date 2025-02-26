@@ -12,14 +12,32 @@
                 </div>
             </div>
 
-            <div class="flex items-center">
+            <div class="flex items-center gap-4">
+                @if (request()->is('/') || request()->is('before-kf'))
+                    <a href="{{ url('/combined') }}"
+                       class="text-gray-800 dark:text-gray-200 text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md hover:shadow-md transition duration-200">
+                       Lihat Gabungan
+                    </a>
+                @endif
+
                 @if (request()->is('/'))
-                    <a href="{{ url('/before-kf') }}" class="text-gray-800 dark:text-gray-200 text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md hover:shadow-md transition duration-200">
+                    <a href="{{ url('/before-kf') }}"
+                       class="text-gray-800 dark:text-gray-200 text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md hover:shadow-md transition duration-200">
                        Lihat tanpa Kalman Filter
                     </a>
                 @elseif (request()->is('before-kf'))
-                    <a href="{{ url('/') }}" class="text-gray-800 dark:text-gray-200 text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md hover:shadow-md transition duration-200">
+                    <a href="{{ url('/') }}"
+                       class="text-gray-800 dark:text-gray-200 text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md hover:shadow-md transition duration-200">
                        Lihat dengan Kalman Filter
+                    </a>
+                @elseif (request()->is('combined'))
+                    <a href="{{ url('/') }}"
+                        class="text-gray-800 dark:text-gray-200 text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md hover:shadow-md transition duration-200">
+                        Lihat dengan Kalman Filter
+                    </a>
+                    <a href="{{ url('/before-kf') }}"
+                       class="text-gray-800 dark:text-gray-200 text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md hover:shadow-md transition duration-200">
+                       Lihat tanpa Kalman Filter
                     </a>
                 @endif
             </div>

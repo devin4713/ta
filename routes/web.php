@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [SensorDataController::class, 'showWithKf']);
 Route::get('/before-kf', [SensorDataController::class, 'showWithoutKf']);
+Route::get('/combined', [SensorDataController::class, 'showCombined']);
 Route::get('/latest', [SensorDataController::class, 'update_chart']);
 
 require __DIR__.'/auth.php';
